@@ -13,3 +13,6 @@ nav li {
 nav {
   display: flex; 
 }
+nav a {
+  flex: 1; 
+}
