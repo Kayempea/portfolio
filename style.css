@@ -10,3 +10,6 @@ body {
 nav li {
     display: contents;
 }
+nav {
+  display: flex; 
+}
