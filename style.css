@@ -53,9 +53,6 @@ label {
   grid-column: 1 / -1;
 }
 
-input, textarea, button {
-  font: inherit; 
-  display: block;
-  width: 100%; 
-  box-sizing: border-box;
+button {
+  grid-column: 1 / -1;
 }
