@@ -47,12 +47,6 @@ form {
   gap: 1em; 
 }
 
-input, textarea, button {
-  font: inherit; 
-  display: block;
-  width: 100%; 
-  box-sizing: border-box;
-}
 
 label {
   display: grid;
