@@ -63,3 +63,8 @@ input, textarea, button {
   width: 100%; 
   box-sizing: border-box;
 }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
+}
