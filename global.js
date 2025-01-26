@@ -57,12 +57,10 @@ if ('colorScheme' in localStorage) {
     const savedColorScheme = localStorage.colorScheme;
     document.documentElement.style.setProperty('color-scheme', savedColorScheme);
     select.value = savedColorScheme; 
-  } else {
-    select.value = 'light dark';  
-}
+} 
 
 select.addEventListener('input', function (event) {
-  console.log('color scheme changed to', event.target.value);
-  document.documentElement.style.setProperty('color-scheme', event.target.value);
-  localStorage.colorScheme = event.target.value;
+    localStorage.colorScheme = event.target.value;
+    console.log('color scheme changed to', event.target.value);
+    document.documentElement.style.setProperty('color-scheme', event.target.value);
 });
