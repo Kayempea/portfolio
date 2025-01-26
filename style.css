@@ -37,9 +37,18 @@ html {
   accent-color: var(--color-accent); 
 }
 
-nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: color-mix(in oklch, var(--color-accent), oklch(60% 10% 220) 50%);
+@media (prefers-color-scheme: light) {
+  nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    background-color: oklch(from var(--color-accent) 95% 5% h)
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    background-color: color-mix(in oklch, var(--color-accent), oklch(60% 10% 220) 50%);
+  }
 }
 
 form {
