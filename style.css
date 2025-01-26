@@ -91,6 +91,10 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance; 
 }
 
-html {
-  color-scheme: dark;
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }
