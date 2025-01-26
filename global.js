@@ -9,6 +9,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'resume/', title: 'Resume' },
     { url: 'contact/', title: 'Contact' }
+    { url: 'https://github.com/Kayempea', title: 'Profile' }
 ];
 
 let nav = document.createElement('nav');
@@ -33,6 +34,6 @@ for (let p of pages) {
     if (a.host !== location.host) {
         a.target = "_blank";
     }
-    
+
     nav.append(a);
 }
