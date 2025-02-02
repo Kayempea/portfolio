@@ -73,22 +73,24 @@ export async function fetchJSON(url) {
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         }
-        console.log(response);
+
         const data = await response.json();
-        return data;
+        return data; 
 
     } catch (error) {
         console.error('Error fetching or parsing JSON data:', error);
     }
 }
 
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
-    containerElement.innerHTML = '';
-    const article = document.createElement('article');
-    article.innerHTML = `
-        <${headingLevel}>${project.title}</${headingLevel}>
-        <img src="${project.image}" alt="${project.title}">
-        <p>${project.description}</p>
-    `;
-    containerElement.appendChild(article);
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+    containerElement.innerHTML = ''; // Clears existing content
+    projects.forEach(project => { // Loops through each project
+        const article = document.createElement('article'); // Creates a new article element
+        article.innerHTML = `
+            <${headingLevel}>${project.title}</${headingLevel}>
+            <img src="${project.image}" alt="${project.title}">
+            <p>${project.description}</p>
+        `;
+        containerElement.appendChild(article); // Appends each article to the container
+    });
 }
