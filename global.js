@@ -67,7 +67,6 @@ select.addEventListener('input', function (event) {
 
 export async function fetchJSON(url) {
     try {
-        // Fetch the JSON file from the given URL
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -83,14 +82,14 @@ export async function fetchJSON(url) {
 }
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-    containerElement.innerHTML = ''; // Clears existing content
-    projects.forEach(project => { // Loops through each project
-        const article = document.createElement('article'); // Creates a new article element
+    containerElement.innerHTML = ''; 
+    projects.forEach(project => { 
+        const article = document.createElement('article');
         article.innerHTML = `
             <${headingLevel}>${project.title}</${headingLevel}>
             <img src="${project.image}" alt="${project.title}">
             <p>${project.description}</p>
         `;
-        containerElement.appendChild(article); // Appends each article to the container
+        containerElement.appendChild(article);
     });
 }
