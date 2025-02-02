@@ -5,10 +5,9 @@ const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
 const githubData = await fetchGitHubData('Kayempea');
 const profileStats = document.querySelector('#profile-stats');
-if (profileStats && githubData) {
+if (profileStats) {
     profileStats.innerHTML = `
-        <h3>GitHub Profile Stats</h3>
-        <dl style="display: grid; grid-template-columns: 1fr 1fr;">
+        <dl>
             <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
             <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
             <dt>Followers:</dt><dd>${githubData.followers}</dd>
