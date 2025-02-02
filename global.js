@@ -84,11 +84,6 @@ export async function fetchJSON(url) {
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
     containerElement.innerHTML = ''; 
 
-    const projectsTitle = document.querySelector('.projects-title');
-    if (projectsTitle) {
-        projectsTitle.textContent = `${projects.length} projects`; 
-    }
-    
     projects.forEach(project => { 
         const article = document.createElement('article');
         article.innerHTML = `
